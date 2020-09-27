@@ -14,7 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/buku")
 public class Control {
-
+//this basic
     @Autowired
     Repo repo;
 
