@@ -8,12 +8,18 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-//@Data
-//
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
+
+//@Data
+//@Entity
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@ToString
+
 public class ListMakanan {
 
     @Id
@@ -61,4 +67,5 @@ public class ListMakanan {
     public void setHarga(int harga) {
         this.harga = harga;
     }
+
 }
