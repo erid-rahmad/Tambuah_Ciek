@@ -1,21 +1,29 @@
-package com.tambuahciek.restaurant.dto;
+package com.tambuahciek.restaurant.Implement;
 
 import com.tambuahciek.restaurant.model.Pembeli;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+
+import java.time.LocalDate;
 
 @Data
-public class OrderReques {
+public class OrderRequesImplement {
+
+    LocalDate localDate = LocalDate.now();
 
     private Pembeli pembeli;
 
-    public OrderReques() {
+    public OrderRequesImplement() {
+
+
+    }
+    public void setdate(){
+        pembeli.setDate(localDate);
     }
 
-    public OrderReques(Pembeli pembeli) {
+    public OrderRequesImplement(Pembeli pembeli) {
         this.pembeli = pembeli;
+
+
     }
 
     @Override
