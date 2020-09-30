@@ -1,14 +1,16 @@
 package com.tambuahciek.restaurant.model;
 
+
 import lombok.Data;
 
 import javax.persistence.*;
-@Data
+
 @Entity
-@Table(name = "makanan")
-public class Makanan {
+@Data
+public class ListMakanan {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO )
     private long id;
 
     @Column(name = "nama")
@@ -20,22 +22,19 @@ public class Makanan {
     @Column(name = "harga")
     private String harga;
 
-
-    private String keterangan;
-
-    public Makanan() {
+    public ListMakanan() {
     }
 
-    public Makanan(long id, String title, String description) {
+    public ListMakanan(long id, String title, String description, String harga) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.harga = harga;
     }
-
 
     @Override
     public String toString() {
-        return "Makanan{" +
+        return "ListMakanan{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +

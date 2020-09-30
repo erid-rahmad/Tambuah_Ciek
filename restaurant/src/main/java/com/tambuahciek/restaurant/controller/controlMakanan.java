@@ -19,6 +19,8 @@ public class controlMakanan {
     @Autowired
     RepositoryMakanan repo;
 
+
+
     @Autowired
     RepositiryPembeli repo1;
 
