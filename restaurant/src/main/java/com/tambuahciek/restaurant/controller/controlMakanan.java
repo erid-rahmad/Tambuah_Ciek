@@ -1,6 +1,9 @@
 package com.tambuahciek.restaurant.controller;
 
+import com.tambuahciek.restaurant.dto.OrderReques;
 import com.tambuahciek.restaurant.model.Makanan;
+import com.tambuahciek.restaurant.model.Pembeli;
+import com.tambuahciek.restaurant.repository.RepositiryPembeli;
 import com.tambuahciek.restaurant.repository.RepositoryMakanan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +18,9 @@ public class controlMakanan {
 
     @Autowired
     RepositoryMakanan repo;
+
+    @Autowired
+    RepositiryPembeli repo1;
 
     @GetMapping("/all")
     public List<Makanan> getAll() {
@@ -57,5 +63,14 @@ public class controlMakanan {
         return bukuone;
     }
 
+    @PostMapping("/order")
+    public Pembeli placeorder(@RequestBody OrderReques orderReques){
+        return repo1.save(orderReques.getPembeli());
+
+    }
+    @GetMapping("/order")
+    public List<Pembeli> finnallorder(){
+        return repo1.findAll();
+    }
 
 }

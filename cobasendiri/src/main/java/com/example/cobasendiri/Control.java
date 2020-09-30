@@ -26,13 +26,13 @@ public class Control {
     }
 
     @PostMapping("/all")
-    public Model tambahsatu(@RequestBody Model tambah){
+    public String tambahsatu(@RequestBody Model tambah){
         LocalDate localDate = LocalDate.now();
         LocalDate localDate1 = localDate.plus(2, ChronoUnit.WEEKS);
         tambah.setTanngalbalik(localDate1);
         tambah.setTanggal(localDate);
-        return repo.save(tambah);
-
+        repo.save(tambah);
+        return "goblok";
     }
 
     @PutMapping("/all/{id}")

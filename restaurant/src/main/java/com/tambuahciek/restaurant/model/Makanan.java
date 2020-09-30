@@ -1,13 +1,14 @@
 package com.tambuahciek.restaurant.model;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+@Data
 @Entity
 @Table(name = "makanan")
 public class Makanan {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "nama")
