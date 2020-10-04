@@ -27,27 +27,8 @@ public class ListMakanan {
     private String description;
 
     @Column(name = "harga")
-    private int harga;
 
-//    public ListMakanan() {
-//    }
-//
-//    public ListMakanan(long id, String title, String description, String harga) {
-//        this.id = id;
-//        this.title = title;
-//        this.description = description;
-//        this.harga = harga;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "ListMakanan{" +
-//                "id=" + id +
-//                ", title='" + title + '\'' +
-//                ", description='" + description + '\'' +
-//                ", harga='" + harga + '\'' +
-//                '}';
-//    }
+    private int harga;
 
     public long getId() {
         return id;

@@ -5,17 +5,19 @@ import lombok.Data;
 
 import java.time.LocalDate;
 
-@Data
+
 public class OrderRequesImplement {
 
     LocalDate localDate = LocalDate.now();
 
     private Pembeli pembeli;
 
+
     public OrderRequesImplement() {
 
 
     }
+
     public void setdate(){
         pembeli.setDate(localDate);
     }

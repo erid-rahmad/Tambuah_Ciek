@@ -11,4 +11,7 @@ public interface RepositoryMakanan extends JpaRepository<Makanan,Long> {
     @Query(value = "SELECT * FROM makanan WHERE pc_fk=?1",nativeQuery = true )
     List<Makanan> listorderbypembeli(int idpembeli);
 
+    @Query(value = "SELECT harga FROM makanan WHERE pc_fk=?1",nativeQuery = true )
+    List<Integer> listorderbyharga(int idpembeli);
+
 }
