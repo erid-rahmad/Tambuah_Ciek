@@ -4,7 +4,7 @@ import com.tambuahciek.restaurant.Implement.OrderRequesImplement;
 import com.tambuahciek.restaurant.Interface.Order;
 import com.tambuahciek.restaurant.model.Makanan;
 import com.tambuahciek.restaurant.model.Pembeli;
-import com.tambuahciek.restaurant.repository.RepositiryPembeli;
+import com.tambuahciek.restaurant.repository.RepositoryPembeli;
 import com.tambuahciek.restaurant.repository.RepositoryMakanan;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
-public class controlOrder {
+public class ControlOrder {
 
     public Logger log = LogManager.getLogger(getClass());
 
@@ -27,28 +27,36 @@ public class controlOrder {
     RepositoryMakanan repositoryMakanan;
 
     @Autowired
-    RepositiryPembeli repositiryPembeli;
+    RepositoryPembeli repositoryPembeli;
     LocalDate localDate = LocalDate.now();
 
-    @PostMapping("/order")
-    public Pembeli placeorder(@RequestBody OrderRequesImplement orderReques){
-        orderReques.setdate();
-        return repositiryPembeli.save(orderReques.getPembeli());
+    @GetMapping("/listorder")
+    public List<Pembeli> listpembelidanproduk(){
+        return order.listpembelidanproduk();
     }
 
-    @GetMapping("/idpembeli/{idpembeli}")
-    public List<Makanan> listyangdibeli(@PathVariable ("idpembeli") int idpembeli ){
-        return order.getall(idpembeli);
+    @GetMapping("/listorderanbyid/{idpembeli}")
+    public List<Makanan> listOrderanByid(@PathVariable ("idpembeli") int idpembeli ){
+        return order.listOrderanById(idpembeli);
     }
 
-    @GetMapping("/order")
-    public List<Pembeli> finnallorder(){
-        return repositiryPembeli.findAll();
+
+    @PostMapping("/createorder")
+    public String createorder(@RequestBody Pembeli pembelibaru){
+        return order.createorder(pembelibaru);
     }
+
+    //testing for development
 
     @GetMapping("/idpembeliharga/{idpembeli}")
     public List<?> haga(@PathVariable ("idpembeli") int idpembeli){
         return repositoryMakanan.listorderbyharga(idpembeli);
+    }
+
+    @PostMapping("/createorder1")
+    public Pembeli createorder1(@RequestBody OrderRequesImplement orderReques){
+        orderReques.setdate();
+        return repositoryPembeli.save(orderReques.getPembeli());
     }
 
 }
