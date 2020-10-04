@@ -1,6 +1,7 @@
 package com.tambuahciek.restaurant.controller;
 
 import com.tambuahciek.restaurant.Implement.OrderRequesImplement;
+import com.tambuahciek.restaurant.model.Makanan;
 import com.tambuahciek.restaurant.model.Pembeli;
 import com.tambuahciek.restaurant.repository.RepositiryPembeli;
 import com.tambuahciek.restaurant.repository.RepositoryMakanan;
@@ -27,10 +28,9 @@ public class controlOrder {
         return repositiryPembeli.save(orderReques.getPembeli());
     }
 
-    @PostMapping("/order2")
-    public Pembeli placeorder(@RequestBody Pembeli pembeli){
-        pembeli.setDate(localDate);
-        return repositiryPembeli.save(pembeli);
+    @GetMapping("/idpembeli/{idpembeli}")
+    public List<Makanan> listyangdibeli(@PathVariable ("idpembeli") int idpembeli ){
+        return repositoryMakanan.listorderbypembeli(idpembeli);
     }
 
     @GetMapping("/order")
