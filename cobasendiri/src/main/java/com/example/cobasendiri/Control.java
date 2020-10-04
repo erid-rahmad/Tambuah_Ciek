@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,8 +26,13 @@ public class Control {
     }
 
     @PostMapping("/all")
-    public Model tambahsatu(@RequestBody Model tambah){
-        return repo.save(tambah);
+    public String tambahsatu(@RequestBody Model tambah){
+        LocalDate localDate = LocalDate.now();
+        LocalDate localDate1 = localDate.plus(2, ChronoUnit.WEEKS);
+        tambah.setTanngalbalik(localDate1);
+        tambah.setTanggal(localDate);
+        repo.save(tambah);
+        return "goblok";
     }
 
     @PutMapping("/all/{id}")
@@ -35,7 +42,9 @@ public class Control {
             return ResponseEntity.notFound().build();
         }
         update.setId(id);
+
         repo.save(update);
+
         return ResponseEntity.noContent().build();
    }
 
