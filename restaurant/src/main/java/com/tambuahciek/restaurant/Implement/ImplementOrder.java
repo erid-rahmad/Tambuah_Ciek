@@ -35,6 +35,7 @@ public class ImplementOrder implements Order {
             System.out.println(totaltagihan);
             totaltagihan+=_makanan.getHarga();
         }
+
         System.out.println(totaltagihan);
 
 
