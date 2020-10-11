@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ControlOrder {
 
     public Logger log = LogManager.getLogger(getClass());
