@@ -10,11 +10,11 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-@Data
+//@Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@ToString
 @Table(name = "pembeli")
 public class Pembeli {
 
@@ -32,6 +32,7 @@ public class Pembeli {
     @OneToMany(targetEntity = Makanan.class , cascade = CascadeType.ALL)
     @JoinColumn(name = "pc_fk",referencedColumnName = "id")
     private List<Makanan> order ;
+
 
     public LocalDate getDate() {
         return date;
@@ -104,4 +105,5 @@ public class Pembeli {
     public void setOrder(List<Makanan> order) {
         this.order = order;
     }
+
 }

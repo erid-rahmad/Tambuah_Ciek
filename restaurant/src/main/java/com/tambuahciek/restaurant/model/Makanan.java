@@ -27,6 +27,7 @@ public class Makanan {
     private String description;
 
     @Column(name = "harga")
+
     private int harga;
 
     private String keterangan;
@@ -70,4 +71,5 @@ public class Makanan {
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
     }
+
 }

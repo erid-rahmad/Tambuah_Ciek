@@ -1,0 +1,71 @@
+[33mcommit 8ed9d4e49697df0bb7c1df6fdaabba40dfcfbe8a[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Oct 4 17:40:28 2020 +0700
+
+    cleaning order
+
+[33mcommit 12ef0393d4f50165e3f982bd2b229b4f55ad16c3[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Oct 4 14:45:56 2020 +0700
+
+    jumlah total rincian data 1
+
+[33mcommit 0b522f449ac194b4c5db8881337d03ff5c896d7d[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Oct 4 14:45:04 2020 +0700
+
+    jumlah total rincian data 1
+
+[33mcommit 11b9969cb20879a2414eddb41dba872c0a97cafc[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Oct 4 14:14:01 2020 +0700
+
+    jumlah total rincian data
+
+[33mcommit b1bb31a318f2da042685b7932a3285e84a0adec2[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Oct 4 12:57:51 2020 +0700
+
+    native query
+
+[33mcommit b36253db51c5c8de424f2c3ae5c9de4776e6ac86[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Wed Sep 30 15:10:25 2020 +0700
+
+    set date
+
+[33mcommit 985c47294e71d5fdad3481d2f5b6c55b4bee1bc4[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Wed Sep 30 14:06:01 2020 +0700
+
+    pake depedency lombok
+
+[33mcommit a5ead951ad015177a7daecb3638b48cf07d7c34d[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Wed Sep 30 14:00:53 2020 +0700
+
+    sampe one to many
+
+[33mcommit 8f8e2c3d4a2e8a6281f6ad2aee60fde544122449[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Wed Sep 30 07:10:00 2020 +0700
+
+    sampe one to many
+
+[33mcommit fe52047b99f5265f3ea0644b73a49b7f5c638ace[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Tue Sep 29 08:51:11 2020 +0700
+
+    firs add
+
+[33mcommit 742573797c97bd528f8e905e5b0ce14a64b201c2[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Sep 27 23:03:20 2020 +0700
+
+    penambahan tanggalambil dan kembali
+
+[33mcommit d0851dcd8fe3545993b49832b663c3649840ecff[m
+Author: eridr <rahmad.erid@multipolar.com>
+Date:   Sun Sep 27 22:53:51 2020 +0700
+
+    firs commit
